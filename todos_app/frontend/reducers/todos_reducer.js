@@ -27,7 +27,7 @@ const todosReducer = (state = initialState, action) => {
       return newState;
     case RECEIVE_TODO:
       newState = Object.assign({}, state);
-      newState[todo.id] = todo;
+      newState[action.todo.id] = action.todo;
       return newState;
     default:
       return state;
